@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    <script type="text/javascript" src="main.js" defer></script>
     <title>BC Ferries Information</title>
 </head>
 <body>
@@ -13,5 +13,35 @@
             alt="bc-ferry-logo"
         />
     </div>
+    <div class="container" id="formId">
+        <form class="search-ferry">
+            <h3>Search Your Ferry</h3>
+
+            <input
+                type="time"
+                name="time"
+                value=""
+                class="input-text"
+            />
+            <br/>
+            <h3> --OR-- </h3>
+            <input
+                type="text"
+                name="vesselName"
+                value=""
+                placeholder="Enter your ferry's name..."
+                class="input-text"
+            />
+            <br/>
+            <input
+                type="submit"
+                name="submit"
+                value="Search ferry"
+                class="submit"
+            />
+        </form>
+    </div>
+   
+    <div id="ferryCollection"></div>
 </body>
 </html>
