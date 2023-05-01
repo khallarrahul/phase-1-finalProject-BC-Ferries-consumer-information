@@ -27,6 +27,7 @@ body{
     flex-direction: column;
     align-items: center;
     background: #fff;
+    /* background: hsla(0, 0%, 100%, 0.3); */
     opacity: .85;
     border-radius: 10px;
     margin: 0.5rem;
@@ -36,4 +37,10 @@ body{
     display: inline-grid;
 }
 
+.showFerryList{
+    color:black;
+    font-size: large;
+    background-color: #fff;
+    border-radius: 10px;
+}
   
