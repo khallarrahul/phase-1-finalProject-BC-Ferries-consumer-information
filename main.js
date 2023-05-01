@@ -5,6 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const addBtn = document.querySelector(".showFerryList");
   const ferryCollection = document.querySelector("#ferryCollection");
   const list = document.querySelector("#showFerryList");
+  addBtn.addEventListener("click", () => {
+    addFerry = !addFerry;
+    if (addFerry) {
+      ferryCollection.style.display = "block"
+      list.textContent = "Close Ferries"
+      getFerry()
+    } else {
+      ferryCollection.style.display = "none";
+      list.textContent = "Open Ferries"
+      location.reload()
+    }
+  });
 
   function getFerry() {
     fetch("https://www.bcferriesapi.ca/api/TSA/SWB/")
