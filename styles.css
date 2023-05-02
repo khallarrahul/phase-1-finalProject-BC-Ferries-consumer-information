@@ -27,7 +27,6 @@ body{
     flex-direction: column;
     align-items: center;
     background: #fff;
-    /* background: hsla(0, 0%, 100%, 0.3); */
     opacity: .85;
     border-radius: 10px;
     margin: 0.5rem;
