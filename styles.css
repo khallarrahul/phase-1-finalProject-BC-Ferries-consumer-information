@@ -1,9 +1,24 @@
 
-body{
-    background-image: url("https://images.unsplash.com/photo-1564835099575-3a09829cbee8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80");
-    margin: 0;
-    font-family: monospace;
+html, body {
+  height: 100%;
+  overflow: auto;
 }
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1564835099575-3a09829cbee8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: monospace;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  width: 100%; 
+  height: 100vh;
+  overflow:auto;
+}
+
+
 
 #bcFerriesImage {
   display: flex;
@@ -34,6 +49,8 @@ body{
     box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
     display: inline-grid;
+    position: relative;
+    bottom: 650px
 }
 
 .showFerryList{
@@ -41,5 +58,7 @@ body{
     font-size: large;
     background-color: #fff;
     border-radius: 10px;
+    position: relative;
+    bottom: 650px
 }
   
