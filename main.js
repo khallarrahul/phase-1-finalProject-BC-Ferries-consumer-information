@@ -16,16 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function getFerry() {
-    fetch("https://www.bcferriesapi.ca/api/TSA/SWB/")
-      .then((response) => response.json())
-      .then((sailings) => {
-        filterFerrybyTime(sailings);
-        renderFerry(sailings.sailings);
-      });
-    // .catch(error => console.log(error), 1000)
+  async function getFerry() {
+    try {
+      const response = await fetch("https://www.bcferriesapi.ca/api/TSA/SWB/");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const sailings = await response.json();
+      filterFerrybyTime(sailings);
+      renderFerry(sailings.sailings);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
   getFerry();
+  
 
   function convertToTimestamp(time) {
     const [hours, minutes] = time.split(":");
@@ -37,10 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (date.getHours() === 12 && time.includes("AM")) {
       date.setHours(date.getHours() - 12);
     }
-    // const timeIn24HourFormat = `${date
-    //   .getHours()
-    //   .toString()
-    //   .padStart(2, "0")}:${date.getMinutes().toString().padStart(2, "0")}`;
+   
     const timestamp = date.getTime();
     return timestamp;
   }
@@ -52,26 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const ferryCollection = document.querySelector("#ferryCollection");
       ferryCollection.querySelectorAll(".card").forEach((c) => c.remove());
       const timeInput = e.target["time"].value;
-      // const timeValue = timeInput;
       const [hours, minutes] = timeInput.split(":");
       let date = new Date();
       date.setHours(parseInt(hours));
       date.setMinutes(parseInt(minutes));
       const timeStamp = date.getTime();
-      // const filteredSailings = sailings.sailings.filter((sailing) => {
-      // return sailing.time >= timeInput;
-      // Output: "02:00 PM"
       const filterTimeArray = sailings.sailings.filter((sailing) => {
         return convertToTimestamp(sailing.time) >= timeStamp;
       });
       renderFerry(filterTimeArray);
-      // }); // i need to account for AM/PM, since how would JS know that in reference for today, AM from next day > PM for this day(8am> 9pm respectively)
-      // ferryCollection.innerText = "";
-      // if (filteredSailings.length > 0) {
-      //   renderFerry({ sailings: filteredSailings });
-      // } else {
-      //   ferryCollection.textContent = "No ferries available at that time.";
-      // }
     });
   }
 
@@ -90,6 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function logoRefresh() {
     const refreshLogo = document.querySelector("#bcFerriesImage");
+    refreshLogo.addEventListener("mouseover", ()=>{
+      refreshLogo.style.transform = "scale(1.1)";
+      refreshLogo.style.zIndex = "1"
+    })
+    refreshLogo.addEventListener("mouseout", ()=>{
+      refreshLogo.style.transform = "scale(1)";
+      refreshLogo.style.zIndex = "0"
+    })
     refreshLogo.addEventListener("click", () => location.reload());
   }
   logoRefresh();
@@ -97,8 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderFerry(sailings) {
     sailings.forEach((sailing) => {
       console.log(sailing);
-      // ferryCollection.innerHTML = null;
-
       const card = document.createElement("div");
       card.classList.add("card");
 
@@ -111,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const p3 = document.createElement("p");
       p3.textContent = `Departing date is ${new Date(
         Date.now()
-      ).toLocaleDateString()}`; // how to add date of departure?
+      ).toLocaleDateString()}`; 
       // const btn = document.createElement("button");
       // btn.textContent = "Add to calendar";
 

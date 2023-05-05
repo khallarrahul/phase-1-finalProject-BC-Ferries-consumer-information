@@ -1,6 +1,5 @@
 
 @import "https://unpkg.com/open-props";
-@import "open-props/colors-hsl";
 
 html, body {
   height: 100%;
@@ -69,13 +68,19 @@ body {
     box-shadow: var(--shadow-5);
 }
 
+#bcFerriesImage {
+  transition: transform 0.2s ease-out;
+  box-shadow: var(--shadow-5);
+}
+
 .showFerryList{
     color:black;
     font-size: large;
     background-color: #fff;
     border-radius: 10px;
     position: relative;
-    bottom: 650px
+    bottom: 650px;
+    box-shadow: var(--shadow-5);
 }
 
 .submit {
