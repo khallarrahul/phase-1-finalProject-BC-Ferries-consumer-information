@@ -59,12 +59,14 @@ body {
     opacity: .85;
     border-radius: 10px;
     margin: 0.5rem;
+    margin-bottom: 1rem;
     transition: transform 0.2s ease-out;
     box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
     display: inline-grid;
     position: relative;
-    bottom: 650px
+    bottom: 650px;
+    box-shadow: var(--shadow-5);
 }
 
 .showFerryList{
