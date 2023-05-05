@@ -1,4 +1,7 @@
 
+@import "https://unpkg.com/open-props";
+@import "open-props/colors-hsl";
+
 html, body {
   height: 100%;
   overflow: auto;
@@ -9,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
-  font-family: monospace;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -18,7 +21,18 @@ body {
   overflow:auto;
 }
 
+.submit {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+}
 
 #bcFerriesImage {
   display: flex;
@@ -61,4 +75,31 @@ body {
     position: relative;
     bottom: 650px
 }
-  
+
+.submit {
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/149/149852.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-icon {
+  /* Set initial styles */
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Change styles on hover */
+.submit-icon:hover {
+  color: blue;
+}
