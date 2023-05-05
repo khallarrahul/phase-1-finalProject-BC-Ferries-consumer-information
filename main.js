@@ -75,6 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function hoverSubmit(){
+    const submitBtn = document.querySelector(".submit");
+    submitBtn.addEventListener("mouseover", () =>{
+      submitBtn.style.transform = "scale(1.2)"
+      submitBtn.style.zIndex = "1"
+    })
+    submitBtn.addEventListener("mouseout", () => {
+      submitBtn.style.transform = "scale(1)";
+      submitBtn.style.zIndex = "0";
+    });
+  }
+  hoverSubmit()
+
   function logoRefresh(){
     const refreshLogo = document.querySelector("#bcFerriesImage");
     refreshLogo.addEventListener("click", () => location.reload());

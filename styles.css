@@ -91,15 +91,3 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.submit-icon {
-  /* Set initial styles */
-  color: black;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
-}
-
-/* Change styles on hover */
-.submit-icon:hover {
-  color: blue;
-}
