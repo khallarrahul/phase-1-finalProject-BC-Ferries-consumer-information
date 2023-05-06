@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 
+  // makes search icon hover when mouse is on top
   function hoverSubmit() {
     const submitBtn = document.querySelector(".submit");
     submitBtn.addEventListener("mouseover", () => {
@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   hoverSubmit();
 
+  // make BC ferry logo hover when mouse comes on top | also refreshes the page when logo is clicked
   function logoRefresh() {
     const refreshLogo = document.querySelector("#bcFerriesImage");
     refreshLogo.addEventListener("mouseover", ()=>{
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   logoRefresh();
 
+  // Renders ferry data in cards into DOM
   function renderFerry(sailings) {
     sailings.forEach((sailing) => {
       console.log(sailing);
@@ -121,7 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
       card.append(p3); // date append
       // card.append(btn);
       ferryCollection.appendChild(card);
-
+      
+      
+      // renders extra information when mouse is hovered over the cards
       let isAppended = false;
 
       card.addEventListener("mouseover", () => {
