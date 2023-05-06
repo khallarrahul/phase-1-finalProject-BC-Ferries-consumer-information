@@ -1,5 +1,5 @@
 let addFerry = false;
-
+// hides and render whole list of ferries
 document.addEventListener("DOMContentLoaded", () => {
   const addBtn = document.querySelector(".showFerryList");
   const ferryCollection = document.querySelector("#ferryCollection");
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // asynchronously GETs ferry data from BC ferry API
   async function getFerry() {
     try {
       const response = await fetch("https://www.bcferriesapi.ca/api/TSA/SWB/");
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   getFerry();
   
-
+  // Converts the string time data from API to comparable time format
   function convertToTimestamp(time) {
     const [hours, minutes] = time.split(":");
     let date = new Date();
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return timestamp;
   }
 
+  // Uses the time input from web to filter the ferries departing after the searched time
   function filterFerrybyTime(sailings) {
     const form = document.querySelector(".search-ferry");
     form.addEventListener("submit", (e) => {
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 
   function hoverSubmit() {
     const submitBtn = document.querySelector(".submit");
     submitBtn.addEventListener("mouseover", () => {
