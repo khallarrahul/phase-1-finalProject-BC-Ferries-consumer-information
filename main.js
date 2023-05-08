@@ -97,6 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   logoRefresh();
 
+  //Footer button which takes you to top when clicked
+  function takeMeToTop (){
+    const topBtn = document.querySelector(".topBtn")
+    topBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.style.scrollBehavior = "smooth"
+    })
+  }
+  takeMeToTop()
   // Renders ferry data in cards into DOM
   function renderFerry(sailings) {
     sailings.forEach((sailing) => {

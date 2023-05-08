@@ -46,7 +46,7 @@ body {
   display: flex;
   justify-content:center;
   background: #515DA2;
-  opacity: .8px;
+  opacity: .95;
   height: 7rem;
   padding: 1rem;
   transition: transform 0.2s ease-out;
@@ -111,4 +111,3 @@ body {
   align-items: center;
   transition: transform 0.2s ease-out;
 }
-
