@@ -1,4 +1,4 @@
-let addFerry = false;
+let addFerry = true;
 // hides and render whole list of ferries
 document.addEventListener("DOMContentLoaded", () => {
   const addBtn = document.querySelector(".showFerryList");
@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelector("#showFerryList");
   addBtn.addEventListener("click", () => {
     addFerry = !addFerry;
-    if (addFerry) {
-      ferryCollection.style.display = "block";
-      list.textContent = "Close Ferries";
-      // getFerry();
-    } else {
+    if (!addFerry) {
       ferryCollection.style.display = "none";
       list.textContent = "Open Ferries";
+      // getFerry();
+    } else {
+      ferryCollection.style.display = "block";
+      list.textContent = "Close Ferries";
     }
   });
 
