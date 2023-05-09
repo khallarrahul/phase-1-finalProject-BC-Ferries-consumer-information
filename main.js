@@ -110,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Renders ferry data in cards into DOM
   function renderFerry(sailings) {
     sailings.forEach((sailing) => {
-      console.log(sailing);
       const card = document.createElement("div");
       card.classList.add("card");
 
