@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
       filterFerrybyTime(sailings);
       renderFerry(sailings.sailings);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   }
   getFerry();
-  
+
   // Converts the string time data from API to comparable time format
   function convertToTimestamp(time) {
     const [hours, minutes] = time.split(":");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (date.getHours() === 12 && time.includes("AM")) {
       date.setHours(date.getHours() - 12);
     }
-   
+
     const timestamp = date.getTime();
     return timestamp;
   }
@@ -85,28 +85,28 @@ document.addEventListener("DOMContentLoaded", () => {
   // make BC ferry logo hover when mouse comes on top | also refreshes the page when logo is clicked
   function logoRefresh() {
     const refreshLogo = document.querySelector("#bcFerriesImage");
-    refreshLogo.addEventListener("mouseover", ()=>{
+    refreshLogo.addEventListener("mouseover", () => {
       refreshLogo.style.transform = "scale(1.1)";
-      refreshLogo.style.zIndex = "1"
-    })
-    refreshLogo.addEventListener("mouseout", ()=>{
+      refreshLogo.style.zIndex = "1";
+    });
+    refreshLogo.addEventListener("mouseout", () => {
       refreshLogo.style.transform = "scale(1)";
-      refreshLogo.style.zIndex = "0"
-    })
+      refreshLogo.style.zIndex = "0";
+    });
     refreshLogo.addEventListener("click", () => location.reload());
   }
   logoRefresh();
 
   //Footer button which takes you to top when clicked
-  function takeMeToTop (){
-    const topBtn = document.querySelector(".topBtn")
+  function takeMeToTop() {
+    const topBtn = document.querySelector(".topBtn");
     topBtn.addEventListener("click", () => {
       document.body.scrollTo({
-        top: 0
-      })
-    })
+        top: 0,
+      });
+    });
   }
-  takeMeToTop()
+  takeMeToTop();
   // Renders ferry data in cards into DOM
   function renderFerry(sailings) {
     sailings.forEach((sailing) => {
@@ -117,13 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const h2 = document.createElement("h2");
       h2.textContent = sailing.vesselName;
       const p1 = document.createElement("p");
-      p1.textContent = `Departing at ${sailing.time}`;
+      p1.textContent = `Departing at : `;
+      const timeSpan = document.createElement("span");
+      timeSpan.textContent = sailing.time;
+      timeSpan.style.color = "blue"; // Set the color of the timeSpan
+      p1.appendChild(timeSpan);
       const p2 = document.createElement("p");
-      p2.textContent = `Percentage occupied is ${sailing.fill} %`;
+      p2.textContent = `Percentage occupied : ${sailing.fill} %`;
       const p3 = document.createElement("p");
-      p3.textContent = `Departing date is ${new Date(
+      p3.textContent = `Departing date : ${new Date(
         Date.now()
-      ).toLocaleDateString()}`; 
+      ).toLocaleDateString()}`;
       // const btn = document.createElement("button");
       // btn.textContent = "Add to calendar";
 
@@ -133,8 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.append(p3); // date append
       // card.append(btn);
       ferryCollection.appendChild(card);
-      
-      
+
       // renders extra information when mouse is hovered over the cards
       let isAppended = false;
 
@@ -144,9 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isAppended) {
           const p4 = document.createElement("h4");
-          p4.textContent = `Car occupancy is ${sailing.carFill} %`;
+          p4.textContent = `Car occupancy : ${sailing.carFill} %`;
           const p5 = document.createElement("h4");
-          p5.textContent = `Heavy vehile occupancy is ${sailing.oversizeFill} %`
+          p5.textContent = `Heavy vehile occupancy : ${sailing.oversizeFill} %`;
           card.append(p4);
           card.append(p5);
           isAppended = true;
@@ -161,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const p4 = card.querySelector("h4");
           p4.remove();
           const p5 = card.querySelector("h4");
-          p5.remove()
+          p5.remove();
           isAppended = false;
         }
       });

@@ -46,7 +46,7 @@ body {
 }
 
 .footer {
-  display: flex;
+  display:flex;
   justify-content:center;
   background: #515DA2;
   opacity: .95;
@@ -61,9 +61,9 @@ body {
 }
 
 .container {
-    display: flex;
+    display:flex;
     justify-content: center;
-    height: 100vh;
+    height:100vh;
   }
 
 .card{
@@ -130,7 +130,7 @@ body {
 	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
 	background-color:#007dc1;
 	border-radius:3px;
-	display:inline-block;
+	display:inline;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
