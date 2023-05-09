@@ -30,6 +30,7 @@ This project was created as a learning exercise, and it would not have been poss
 
 - The BC Ferries API was used to retrieve the ferry information. The documentation can be found here.
 - The web development community on Stack Overflow and MDN Web Docs for providing helpful resources and insights
+- Flatiron School community- teachers and students
 
 # License
 This project is licensed under MIT license.
