@@ -101,8 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function takeMeToTop (){
     const topBtn = document.querySelector(".topBtn")
     topBtn.addEventListener("click", () => {
-      document.body.scrollTop = 0;
-      document.documentElement.style.scrollBehavior = "smooth"
+      document.body.scrollTo({
+        top: 0
+      })
     })
   }
   takeMeToTop()

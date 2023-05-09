@@ -41,6 +41,9 @@ body {
   height: 7rem;
   padding: 1rem;
 }
+#bcFerriesImage:hover{
+  background-color: #007dc1;
+}
 
 .footer {
   display: flex;
@@ -49,9 +52,12 @@ body {
   opacity: .95;
   height: 7rem;
   padding: 1rem;
-  transition: transform 0.2s ease-out;
   box-shadow: var(--shadow-5);
-  
+  font-size:larger;
+}
+
+.footer:hover{
+    background-color: #007dc1;
 }
 
 .container {
@@ -78,6 +84,10 @@ body {
     position: relative;
     bottom: 650px;
     box-shadow: var(--shadow-5);
+}
+
+.card:hover{
+  background-color: #007dc1;
 }
 
 #bcFerriesImage {
@@ -110,4 +120,22 @@ body {
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease-out;
+}
+
+.topBtn{
+  position: relative;
+  top: 2px;
+  left:30rem;
+  box-shadow:inset 0px 0px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:9px 19px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #154682;
 }
