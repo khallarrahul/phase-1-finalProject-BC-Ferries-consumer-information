@@ -132,19 +132,22 @@ body {
 }
 
 .submit {
-  font-size: 0;
-  border: none;
-  background-color: transparent;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/149/149852.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  
+  top: 2px;
+  left:23rem;
+  box-shadow:inset 0px 0px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:9px 19px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #154682;
   transition: transform 0.2s ease-out;
 }
 

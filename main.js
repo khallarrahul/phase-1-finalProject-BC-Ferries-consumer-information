@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error:", error);
     }
   }
-  getFerry();
+  setInterval(getFerry, 5000)
 
   // Converts the string time data from API to comparable time format
   function convertToTimestamp(time) {
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   takeMeToTop();
   // Renders ferry data in cards into DOM
   function renderFerry(sailings) {
+    ferryCollection.replaceChildren()
     sailings.forEach((sailing) => {
       const card = document.createElement("div");
       card.classList.add("card");
