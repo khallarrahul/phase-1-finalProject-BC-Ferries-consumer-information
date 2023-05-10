@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error:", error);
     }
   }
-  setInterval(getFerry, 5000)
+  getFerry()
+  setInterval(getFerry, 30000)
 
   // Converts the string time data from API to comparable time format
   function convertToTimestamp(time) {
