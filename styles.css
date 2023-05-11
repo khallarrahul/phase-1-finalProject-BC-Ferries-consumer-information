@@ -1,6 +1,7 @@
 
 @import "https://unpkg.com/open-props";
 
+
 html, body {
   height: 100%;
   overflow: auto;
@@ -24,6 +25,9 @@ body {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
+.search-ferry{
+  height: 100px;
+}
 
 .input-time{
   width: 150px
