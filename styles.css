@@ -92,7 +92,7 @@ body {
     flex-wrap: wrap;
     display: inline-grid;
     position: relative;
-    bottom: 650px;
+    bottom: 550px;
     box-shadow: var(--shadow-5);
 }
 
@@ -111,9 +111,10 @@ body {
     background-color: #fff;
     border-radius: 10px;
     position: relative;
-    bottom: 650px;
+    bottom: 550px;
     box-shadow: var(--shadow-5);
 }
+
 
 #showFerryList{
   box-shadow:inset 0px 0px 0px 0px #54a3f7;
@@ -136,10 +137,6 @@ body {
 }
 
 .submit {
-  position: relative;
-  
-  top: 2px;
-  left:23rem;
   box-shadow:inset 0px 0px 0px 0px #54a3f7;
 	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
 	background-color:#007dc1;
