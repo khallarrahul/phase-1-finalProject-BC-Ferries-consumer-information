@@ -12,7 +12,7 @@ This is a web application that provides real-time information about BC Ferries. 
 - Logo refresh feature that reloads the page when clicked.
 - Take Me to Top button for easy navigation.
 
-# Technologies Used
+# Technologies Used.
 - HTML, CSS, and JavaScript were used to create the user interface.
 - BC Ferries API was used to retrieve the ferry information.
 - The application was built using asynchronous JavaScript with async and await functions for better performance.
