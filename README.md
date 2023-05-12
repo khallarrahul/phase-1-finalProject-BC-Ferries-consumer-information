@@ -40,6 +40,10 @@ This project was created as a learning exercise, and it would not have been poss
 - The web development community on Stack Overflow and MDN Web Docs for providing helpful resources and insights
 - Flatiron School community- teachers and fellow students!
 
+# Non-Technical Walkthrough video:
+You can check the video here:
+https://www.loom.com/share/127dae64d4be40188705790cbba02ff3
+
 # License
 This project is licensed under MIT license.
 Copyright (c) 2012-2023 Scott Chacon and others
