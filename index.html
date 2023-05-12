@@ -25,20 +25,19 @@
               <div class="time-container">
                 <label for="time">Select Time:</label>
                 <input type="time" id="time" name="time" value="" class="input-time">
-                <div class="clock">
-                  <div class="hour"></div>
-                  <div class="minute"></div>
-                </div>
+                
               </div>
               <br>
               <input type="submit" name="submit" value="Search ferry" class="submit">
+              <br/>
             </form>
           </div>
+          <br/>
+          <p class="showFerryList" style="text-align:center;">View The Available Ferries <button id="showFerryList">Close Ferries</button></p>
+          <div id="ferryCollection"></div>
       </header>
-      <p class="showFerryList" style="text-align:center;">View The Available Ferries <button id="showFerryList">Close Ferries</button></p>
-      <div id="ferryCollection"></div>
       <footer>
-        <p class="footer">&copy; 2023 Rahul Khallar. All rights reserved. Powered by BC Ferries API.
+        <p class="footer">
           <button class="topBtn">TOP</button> 
         </p>
       </footer>

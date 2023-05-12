@@ -126,18 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
       p1.appendChild(timeSpan);
       const p2 = document.createElement("p");
       p2.textContent = `Percentage occupied : ${sailing.fill} %`;
-      const p3 = document.createElement("p");
-      p3.textContent = `Departing date : ${new Date(
-        Date.now()
-      ).toLocaleDateString()}`;
-      // const btn = document.createElement("button");
-      // btn.textContent = "Add to calendar";
 
       card.appendChild(h2);
       card.appendChild(p1);
       card.appendChild(p2);
-      card.append(p3); // date append
-      // card.append(btn);
       ferryCollection.appendChild(card);
 
       // renders extra information when mouse is hovered over the cards
