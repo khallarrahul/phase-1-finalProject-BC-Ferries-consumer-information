@@ -17,6 +17,14 @@ This is a web application that provides real-time information about BC Ferries. 
 - BC Ferries API was used to retrieve the ferry information.
 - The application was built using asynchronous JavaScript with async and await functions for better performance.
 
+# Searching ferry
+- **The web app only searches for ferries from current day since API does not provides the date of departure.
+
+# Links used
+- BC ferry API: https://www.bcferriesapi.ca/api/TSA/SWB/
+- BC ferry logo: https://www.ferrytracker.net/images/ferry%20-%20logos/SMALL/BC-FERRIES.png
+- Background image: https://images.unsplash.com/photo-1564835099575-3a09829cbee8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80
+
 # Getting Started
 To use the application, follow these steps:
 
