@@ -7,7 +7,7 @@ This is a web application that provides real-time information about BC Ferries. 
 - Real-time ferry information from BC Ferries API.
 - Search feature for finding ferries departing after a specified time.
 - User-friendly and interactive interface with a button to hide or show the full list of ferries.
-- Cards that display ferry information, including the vessel name, departure time, percentage occupied, and departure date.
+- Cards that display ferry information, including the vessel name, departure time, percentage occupied.
 - Hover effect on cards that shows more details about the sailing schedule.
 - Logo refresh feature that reloads the page when clicked.
 - Take Me to Top button for easy navigation.
